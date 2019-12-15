@@ -16,7 +16,7 @@ class FavbeachesController < ApplicationController
 
     private
     def favbeach_params
-    params.permit(:location)
+    params.permit(:name,:img,:lat,:lng)
     end
 
 end

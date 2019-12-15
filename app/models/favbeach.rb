@@ -1,3 +1,2 @@
-class Favbeach < ApplicationRecord
-    belongs_to :user
+class Favbeach < ApplicationRecord    
 end

@@ -7,9 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 u1 = User.create(name:"harold")
-
-b1 = Favbeach.create(name:"Manhattan Beach")
-
 r1 = Review.create(review:"It was freaking Aaaawesome.")
 
-puts "User, FavBeach and Review are Good To Go."
+# puts 'Fetching Beach Data...'
+# (1..1500).each do |beach|
+#   request_url = "https://api.coastal.ca.gov/access/v1/locations"
+#   request = RestClient::Request.execute(
+#     method: :get,
+#     url: request_url)
+
+#   beach = JSON.parse(request)
+# byebugexit
+#   Favbeach.create(
+#     name: beach.NameMobileWeb,
+#     img: beach.Photo_1,
+#     lat: beach.LATITUDE,
+#     lng: beach.LONGITUDE,
+#   )
+
+# end
+
+puts "User, FavBeaches and Review are Good To Go."
