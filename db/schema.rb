@@ -10,18 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_003537) do
+ActiveRecord::Schema.define(version: 2019_12_13_141456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "favbeaches", force: :cascade do |t|
     t.string "name"
+    t.string "photo_1"
+    t.string "photo_2"
+    t.string "photo_3"
+    t.decimal "lat"
+    t.decimal "lng"
+    t.string "ez4strollers"
+    t.string "restrooms"
+    t.string "dog_friendly"
+    t.string "campground"
+    t.string "bluff"
+    t.string "tidepool"
+    t.string "fishing"
+    t.string "boating"
+    t.string "bike_path"
+    t.string "rky_shore"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "img"
-    t.integer "lat"
-    t.integer "lng"
   end
 
   create_table "reviews", force: :cascade do |t|

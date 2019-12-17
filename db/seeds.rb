@@ -19,10 +19,22 @@ request = RestClient::Request.execute(
     
   beaches.each do |beach|
   Favbeach.create(
-    name: beach["NameMobileWeb"],
-    img: beach["Photo_1"],
-    lat: beach["LATITUDE"],
-    lng: beach["LONGITUDE"]
+    name:beach["NameMobileWeb"],
+    photo_1:beach["Photo_1"],
+    photo_2:beach["Photo_2"],
+    photo_3:beach["Photo_3"],
+    lat:beach["LATITUDE"],
+    lng:beach["LONGITUDE"],
+    ez4strollers:beach["EZ4STROLLERS"],
+    restrooms:beach["RESTROOMS"],
+    dog_friendly:beach["DOG_FRIENDLY"],
+    campground:beach["CAMPGROUND"],
+    bluff:beach["BLUFF"],
+    tidepool:beach["TIDEPOOL"],
+    fishing:beach["FISHING"],
+    boating:beach["BOATING"],
+    bike_path:beach["BIKE_PATH"],
+    rky_shore:beach["RKY_SHORE"]
   )
 end
 
