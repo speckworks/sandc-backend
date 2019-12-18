@@ -39,8 +39,10 @@ ActiveRecord::Schema.define(version: 2019_12_13_141456) do
   create_table "reviews", force: :cascade do |t|
     t.string "review"
     t.bigint "user_id"
+    t.bigint "favbeach_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["favbeach_id"], name: "index_reviews_on_favbeach_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -50,5 +52,6 @@ ActiveRecord::Schema.define(version: 2019_12_13_141456) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "reviews", "favbeaches"
   add_foreign_key "reviews", "users"
 end

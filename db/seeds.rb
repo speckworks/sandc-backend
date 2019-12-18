@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 u1 = User.create(name:"harold")
-r1 = Review.create(review:"It was freaking Aaaawesome.")
 
 puts 'Fetching Beach Data...'
 request_url = "https://api.coastal.ca.gov/access/v1/locations"
@@ -23,8 +22,8 @@ request = RestClient::Request.execute(
     photo_1:beach["Photo_1"],
     photo_2:beach["Photo_2"],
     photo_3:beach["Photo_3"],
-    lat:beach["LATITUDE"],
-    lng:beach["LONGITUDE"],
+    lat:beach["LATITUDE"].to_f,
+    lng:beach["LONGITUDE"].to_f,
     ez4strollers:beach["EZ4STROLLERS"],
     restrooms:beach["RESTROOMS"],
     dog_friendly:beach["DOG_FRIENDLY"],
