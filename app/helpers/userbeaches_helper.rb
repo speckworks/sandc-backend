@@ -1,0 +1,2 @@
+module UserbeachesHelper
+end
