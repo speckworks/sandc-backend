@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u1 = User.create(name:"harold")
+u1 = User.create(name:"harold", password:"123")
+u2 = User.create(name:"john", password:"123")
+
 
 puts 'Fetching Beach Data...'
 request_url = "https://api.coastal.ca.gov/access/v1/locations"
