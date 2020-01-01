@@ -1,4 +1,4 @@
 class Userbeach < ApplicationRecord
     belongs_to :user
-    belongs_to :favbeach
+    belongs_to :beaches
 end

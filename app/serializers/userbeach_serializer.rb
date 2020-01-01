@@ -1,3 +1,3 @@
 class UserbeachSerializer < ActiveModel::Serializer
-  attributes :id, :name, :favbeach_id, :user_id
+  attributes :id, :name, :beach_id, :user_id
 end

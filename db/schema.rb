@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_27_183127) do
+ActiveRecord::Schema.define(version: 2019_12_18_213335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "favbeaches", force: :cascade do |t|
+  create_table "beaches", force: :cascade do |t|
     t.string "name"
     t.string "photo_1"
     t.string "photo_2"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_12_27_183127) do
     t.string "boating"
     t.string "bike_path"
     t.string "rky_shore"
+    t.string "review_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -39,16 +40,16 @@ ActiveRecord::Schema.define(version: 2019_12_27_183127) do
   create_table "reviews", force: :cascade do |t|
     t.string "review"
     t.bigint "user_id"
-    t.bigint "favbeach_id"
+    t.bigint "beach_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["favbeach_id"], name: "index_reviews_on_favbeach_id"
+    t.index ["beach_id"], name: "index_reviews_on_beach_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "userbeaches", force: :cascade do |t|
     t.string "name"
-    t.string "favbeach_id"
+    t.string "beach_id"
     t.string "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -56,11 +57,11 @@ ActiveRecord::Schema.define(version: 2019_12_27_183127) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
   end
 
-  add_foreign_key "reviews", "favbeaches"
+  add_foreign_key "reviews", "beaches"
   add_foreign_key "reviews", "users"
 end

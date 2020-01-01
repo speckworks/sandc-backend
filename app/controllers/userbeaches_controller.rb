@@ -1,7 +1,7 @@
 class UserbeachesController < ApplicationController
         def index
         @userbeaches = Userbeach.all 
-        render json: @userbeaches
+        render json: @userbeaches, include:"**"
         end
     
         def show

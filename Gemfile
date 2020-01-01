@@ -43,4 +43,4 @@ gem 'active_model_serializers'
 
 gem 'jwt', '~>2.2'
 gem "dotenv-rails", "~> 2.7"
-gem 'listen', '>= 3.0.5', '< 3.2'
+

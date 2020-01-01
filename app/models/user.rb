@@ -1,7 +1,8 @@
 class User < ApplicationRecord
    has_many :reviews, dependent: :destroy
    has_many :userbeaches, dependent: :destroy
-   has_many :favbeaches, through: :reviews
+   has_many :beaches, through: :reviews
+   has_many :beaches, through: :userbeaches
 
    has_secure_password
 

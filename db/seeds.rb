@@ -19,7 +19,7 @@ request = RestClient::Request.execute(
   beaches = JSON.parse(request)
     
   beaches.each do |beach|
-  Favbeach.create(
+  Beach.create(
     name:beach["NameMobileWeb"],
     photo_1:beach["Photo_1"],
     photo_2:beach["Photo_2"],
@@ -39,4 +39,4 @@ request = RestClient::Request.execute(
   )
 end
 
-puts "User, FavBeaches and Review are Good To Go."
+puts "User, Beaches and Review are Good To Go."
