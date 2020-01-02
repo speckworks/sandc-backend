@@ -1,4 +1,6 @@
 class Beach < ApplicationRecord    
-    belongs_to :reviews
+    has_many :reviews
     has_many :userbeaches
+    has_many :users, through: :userbeaches 
+
 end

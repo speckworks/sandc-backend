@@ -27,7 +27,7 @@ class UserbeachesController < ApplicationController
     
         private
         def userbeach_params
-        params.permit(:name, :user_id, :favbeach_id)
+        params.permit(:name, :user_id, :beach_id)
         end
         
 end
