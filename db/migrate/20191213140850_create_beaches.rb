@@ -1,6 +1,6 @@
-class CreateFavbeaches < ActiveRecord::Migration[6.0]
+class CreateBeaches < ActiveRecord::Migration[6.0]
   def change
-    create_table :favbeaches do |t|
+    create_table :beaches do |t|
       t.string :name
       t.string :photo_1
       t.string :photo_2
@@ -17,6 +17,7 @@ class CreateFavbeaches < ActiveRecord::Migration[6.0]
       t.string :boating
       t.string :bike_path
       t.string :rky_shore
+      t.string :review_id
       t.timestamps
     end
   end

@@ -1,2 +1,0 @@
-class Favbeach < ApplicationRecord    
-end

@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u1 = User.create(name:"harold")
-r1 = Review.create(review:"It was freaking Aaaawesome.")
+u1 = User.create(name:"harold", password:"123")
+u2 = User.create(name:"john", password:"123")
+
 
 puts 'Fetching Beach Data...'
 request_url = "https://api.coastal.ca.gov/access/v1/locations"
@@ -18,13 +19,13 @@ request = RestClient::Request.execute(
   beaches = JSON.parse(request)
     
   beaches.each do |beach|
-  Favbeach.create(
+  Beach.create(
     name:beach["NameMobileWeb"],
     photo_1:beach["Photo_1"],
     photo_2:beach["Photo_2"],
     photo_3:beach["Photo_3"],
-    lat:beach["LATITUDE"],
-    lng:beach["LONGITUDE"],
+    lat:beach["LATITUDE"].to_f,
+    lng:beach["LONGITUDE"].to_f,
     ez4strollers:beach["EZ4STROLLERS"],
     restrooms:beach["RESTROOMS"],
     dog_friendly:beach["DOG_FRIENDLY"],
@@ -38,4 +39,4 @@ request = RestClient::Request.execute(
   )
 end
 
-puts "User, FavBeaches and Review are Good To Go."
+puts "User, Beaches and Review are Good To Go."
