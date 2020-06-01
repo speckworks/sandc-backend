@@ -38,7 +38,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "rest-client", "~> 1.6.7"
+gem "rest-client", "~> 1.8.0"
 gem 'active_model_serializers'
 
 gem 'jwt', '~>2.2'
