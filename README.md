@@ -6,4 +6,4 @@ Be sure to:
 
 *Yarn Install* 
 
-*Rails S to Run the server*
+*"Rails S" to Run the server*
