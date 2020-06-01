@@ -1,24 +1,9 @@
-# README
+# California Beachfinder Back End Repo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a database of 1500+ California beaches. 
 
-Things you may want to cover:
+Be sure to:
 
-* Ruby version
+*Yarn Install* 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Rails S to Run the server*
